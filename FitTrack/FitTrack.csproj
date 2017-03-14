@@ -35,6 +35,9 @@
     <EmbeddedResource Include="Pages\RoutinePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pages\WorkoutPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -46,6 +49,9 @@
     </Compile>
     <Compile Include="Pages\RoutinePage.xaml.cs">
       <DependentUpon>RoutinePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WorkoutPage.xaml.cs">
+      <DependentUpon>WorkoutPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

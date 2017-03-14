@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FitTrack.WorkoutPage">
+	<ContentPage.Content>
+		<ListView x:Name="listView" RowHeight="120" SeparatorVisibility="None">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" Margin="10, 10, 10, 10">
+							<Label Text="{Binding Name}" TextColor="Gray" FontAttributes="Bold" />
+							<Label Text="{Binding Sets, StringFormat='Sets : {0}'}" TextColor="Gray" />
+							<Label Text="{Binding Reps, StringFormat='Reps : {0}'}" TextColor="Gray" />
+							<Label Text="{Binding Weights, StringFormat='Weights : {0}'}" TextColor="Gray" />
+						</StackLayout>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</ContentPage.Content>
+</ContentPage>
