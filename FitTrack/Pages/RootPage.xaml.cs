@@ -12,9 +12,9 @@ namespace FitTrack
 			InitializeComponent();
 		}
 
-		private void OnRoutineClicked(object sender, EventArgs e)
+		private async void OnRoutineClicked(object sender, EventArgs e)
 		{
-			
+			await Navigation.PushAsync(new RoutinePage());
 		}
 	}
 }
