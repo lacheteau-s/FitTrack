@@ -8,7 +8,7 @@ namespace FitTrack
 		{
 			InitializeComponent();
 
-			MainPage = new FitTrackPage();
+			MainPage = new RootPage();
 		}
 
 		protected override void OnStart()
