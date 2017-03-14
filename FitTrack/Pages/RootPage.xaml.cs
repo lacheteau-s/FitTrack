@@ -9,6 +9,8 @@ namespace FitTrack
 	{
 		public RootPage()
 		{
+			Title = "Select a routine";
+			NavigationPage.SetBackButtonTitle(this, string.Empty);
 			InitializeComponent();
 		}
 
