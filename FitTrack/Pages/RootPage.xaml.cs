@@ -11,5 +11,10 @@ namespace FitTrack
 		{
 			InitializeComponent();
 		}
+
+		private void OnRoutineClicked(object sender, EventArgs e)
+		{
+			
+		}
 	}
 }
