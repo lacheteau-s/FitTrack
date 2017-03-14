@@ -5,18 +5,18 @@ using Xamarin.Forms;
 
 namespace FitTrack
 {
-	public partial class RootPage : ContentPage
+	public partial class RoutinePage : ContentPage
 	{
-		public RootPage()
+		public RoutinePage()
 		{
-			Title = "Routines";
+			Title = "Workouts";
 			NavigationPage.SetBackButtonTitle(this, string.Empty);
 			InitializeComponent();
 		}
 
-		private async void OnRoutineClicked(object sender, EventArgs e)
+		private void OnWorkoutClicked(object sender, EventArgs e)
 		{
-			await Navigation.PushAsync(new RoutinePage());
+			
 		}
 	}
 }

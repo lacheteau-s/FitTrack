@@ -8,7 +8,11 @@ namespace FitTrack
 		{
 			InitializeComponent();
 
-			MainPage = new RootPage();
+			MainPage = new NavigationPage(new RootPage())
+			{
+				BarTextColor = Color.White,
+				BarBackgroundColor = Color.Teal
+			};
 		}
 
 		protected override void OnStart()
