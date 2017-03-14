@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FitTrack.RoutinePage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FitTrack.RoutinePage" Padding="20, 20, 20, 20">
 	<ContentPage.Content>
-		<Label Text="Routine page" />
+		<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="15" >		
+			<Button Text="Day 1" BackgroundColor="Teal" TextColor="White" Clicked="OnWorkoutClicked" />
+			<Button Text="Day 2" BackgroundColor="Teal" TextColor="White" Clicked="OnWorkoutClicked" />
+			<Button Text="Day 3" BackgroundColor="Teal" TextColor="White" Clicked="OnWorkoutClicked" />
+			<Button Text="Day 4" BackgroundColor="Teal" TextColor="White" Clicked="OnWorkoutClicked" />
+			<Button Text="Day 5" BackgroundColor="Teal" TextColor="White" Clicked="OnWorkoutClicked" />
+		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
