@@ -7,11 +7,11 @@ namespace FitTrack
 {
 	public partial class WorkoutPage : ContentPage
 	{
-		private Workout Workout;
+		private WorkoutViewModel Workout;
 
 		public ObservableCollection<Exercise> Exercises;
 
-		public WorkoutPage(Workout workout)
+		public WorkoutPage(WorkoutViewModel workout)
 		{
 			Title = workout.Name;
 			Workout = workout;
