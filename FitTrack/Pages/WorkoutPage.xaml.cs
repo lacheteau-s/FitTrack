@@ -10,6 +10,8 @@ namespace FitTrack
 	{
 		private WorkoutViewModel Workout;
 
+		private bool _running = false;
+
 		public TimeSpan Timer { get; set; }
 
 		public ObservableCollection<Exercise> Exercises;
@@ -22,13 +24,36 @@ namespace FitTrack
 			InitializeComponent();
 			listView.ItemsSource = Exercises;
 			Timer = TimeSpan.FromTicks(0);
+		}
 
-			Xamarin.Forms.Device.StartTimer(TimeSpan.FromMilliseconds(10), () => 
+		private void OnStartStopClicked(object sender, EventArgs e)
+		{
+			if (!_running)
 			{
-				Timer = Timer.Add(TimeSpan.FromMilliseconds(10));
-				timerLabel.Text = string.Format("{0:hh\\:mm\\:ss\\.ff}", Timer);
-				return true; // false to stop timer
-			});
+				startStopButton.Text = "Stop";
+				startStopButton.BackgroundColor = Color.Red;
+				_running = true;
+				Device.StartTimer(TimeSpan.FromMilliseconds(10), OnElapsed);
+			}
+			else
+			{
+				startStopButton.Text = "Start";
+				startStopButton.BackgroundColor = Color.Lime;
+				_running = false;
+			}
+		}
+
+		private void OnResetClicked(object sender, EventArgs e)
+		{
+			Timer = TimeSpan.FromTicks(0);
+			timerLabel.Text = string.Format("{0:hh\\:mm\\:ss\\.ff}", Timer);
+		}
+
+		private bool OnElapsed()
+		{
+			Timer = Timer.Add(TimeSpan.FromMilliseconds(10));
+			timerLabel.Text = string.Format("{0:hh\\:mm\\:ss\\.ff}", Timer);
+			return _running;
 		}
 	}
 }
